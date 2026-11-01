@@ -1,0 +1,882 @@
+/* ==========================================================
+   BeautyMatch — css/style.css  (faqat CSS, kutubxonasiz)
+   ========================================================== */
+
+/* ---------- 1. RANGLAR (o'zgaruvchilar) ---------- */
+:root {
+  --pink: #f6c9d6;
+  --pink-soft: #fdeef3;
+  --pink-deep: #bf4f76;
+  --yellow: #fbe9a8;
+  --yellow-soft: #fff8dd;
+  --olive: #6b7a36;
+  --olive-dark: #4d5a25;
+  --olive-soft: #e6ebd0;
+  --ink: #3a3a2b;
+  --muted: #77756a;
+  --bg: #fffdf6;
+}
+
+/* ---------- 2. BOSHLANG'ICH SOZLAMALAR ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;   /* yopishqoq menyu havola ustini yopmasligi uchun */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+h1, h2, h3 {
+  margin: 0 0 .5rem;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.25;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+a {
+  color: var(--olive-dark);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  background: var(--pink);   /* rasm yuklanmaguncha pushti fon */
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.center {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+}
+
+.section-sub {
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.bg-pink {
+  background: var(--pink-soft);
+}
+
+/* ---------- 3. TUGMALAR ---------- */
+.btn {
+  display: inline-block;
+  padding: .6rem 1.4rem;
+  border: 2px solid var(--olive);
+  border-radius: 50px;
+  background: var(--olive);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--olive-dark);
+  border-color: var(--olive-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--olive-dark);
+}
+
+.btn-outline:hover {
+  background: var(--olive);
+  color: #fff;
+}
+
+.btn-sm {
+  padding: .3rem 1rem;
+  font-size: .9rem;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-big {
+  padding: .8rem 1.8rem;
+  font-size: 1.1rem;
+}
+
+/* ---------- 4. MENYU ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+  border-bottom: 3px solid var(--yellow);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem 1.5rem;
+  padding-top: .8rem;
+  padding-bottom: .8rem;
+}
+
+.logo {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--pink-deep);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--olive);
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .3rem 1.2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--ink);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--pink-deep);
+}
+
+.nav-links a.btn {
+  color: #fff;
+}
+
+/* ---------- 5. BOSH EKRAN (hero) ---------- */
+.hero {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--pink-soft) 0%, var(--yellow-soft) 100%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.eyebrow {
+  margin-bottom: 1rem;
+  font-size: .8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--pink-deep);
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+}
+
+.hero h1 em {
+  color: var(--pink-deep);
+}
+
+.lead {
+  margin: 1.2rem 0 1.5rem;
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+}
+
+.hero-img-wrap {
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 200px 200px 24px 24px;
+}
+
+.hero-badge {
+  position: absolute;
+  left: 12px;
+  bottom: 28px;
+  padding: .7rem 1.1rem;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(77, 90, 37, .18);
+}
+
+.stars {
+  color: #c98f00;
+  font-weight: bold;
+}
+
+/* ---------- 6. XIZMAT KARTOCHKALARI ---------- */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  gap: 1rem;
+}
+
+.tile {
+  display: block;
+  padding: 1.4rem .8rem;
+  border: 2px solid var(--olive-soft);
+  border-radius: 18px;
+  background: #fff;
+  color: var(--ink);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: transform .2s, background .2s;
+}
+
+.tile:hover {
+  transform: translateY(-4px);
+  background: var(--yellow-soft);
+  border-color: var(--yellow);
+}
+
+.tile .emoji {
+  display: block;
+  margin-bottom: .4rem;
+  font-size: 2.1rem;
+}
+
+/* ---------- 7. USTA KARTOCHKASI ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid var(--olive-soft);
+  border-radius: 20px;
+  background: #fff;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(77, 90, 37, .15);
+}
+
+.thumb {
+  position: relative;
+}
+
+.thumb img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: .25rem .75rem;
+  border-radius: 50px;
+  background: var(--yellow);
+  color: var(--olive-dark);
+  font-size: .8rem;
+  font-weight: bold;
+}
+
+.card-body {
+  padding: 1rem 1.2rem 1.2rem;
+}
+
+.card-body h3 {
+  font-size: 1.15rem;
+}
+
+.small {
+  font-size: .9rem;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+}
+
+.price {
+  color: var(--olive-dark);
+  font-weight: bold;
+}
+
+/* ---------- 8. QANDAY ISHLAYDI ---------- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: 2rem;
+}
+
+.step-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: var(--olive);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* ---------- 9. USTA BO'LISH BLOKI ---------- */
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2.5rem;
+  border-radius: 24px;
+  background: var(--yellow);
+}
+
+.cta h2 {
+  margin-bottom: .3rem;
+}
+
+.cta p {
+  margin: 0;
+}
+
+/* ---------- 10. SAVOL-JAVOB (details) ---------- */
+.faq {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+details {
+  margin-bottom: .8rem;
+  border: 1px solid var(--olive-soft);
+  border-radius: 12px;
+  background: #fff;
+}
+
+summary {
+  padding: 1rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+details[open] summary {
+  background: var(--yellow-soft);
+  border-radius: 12px 12px 0 0;
+}
+
+details p {
+  margin: 0;
+  padding: 1rem 1.2rem;
+}
+
+/* ---------- 11. SAHIFA SARLAVHASI VA HAVOLA-TUGMALAR ---------- */
+.page-head {
+  padding: 2.8rem 0;
+  background: linear-gradient(135deg, var(--pink-soft), var(--yellow-soft));
+  border-bottom: 1px solid var(--olive-soft);
+}
+
+.page-head h1 {
+  margin: 0 0 .3rem;
+  font-size: 2.2rem;
+}
+
+.page-head p {
+  margin: 0;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin: 0 0 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.pills a {
+  display: block;
+  padding: .45rem 1.1rem;
+  border: 2px solid var(--olive);
+  border-radius: 50px;
+  color: var(--olive-dark);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.pills a:hover {
+  background: var(--olive);
+  color: #fff;
+}
+
+.block-title {
+  margin-top: 2.5rem;
+  padding-bottom: .4rem;
+  border-bottom: 3px solid var(--pink);
+  font-size: 1.6rem;
+}
+
+.block-title:first-child {
+  margin-top: 0;
+}
+
+/* ---------- 12. JADVALLAR ---------- */
+.table-wrap {
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th, td {
+  padding: .8rem 1rem;
+  border-bottom: 1px solid var(--olive-soft);
+  text-align: left;
+}
+
+th {
+  background: var(--olive-soft);
+  color: var(--olive-dark);
+}
+
+tbody tr:nth-child(even) {
+  background: var(--yellow-soft);
+}
+
+tbody tr:hover {
+  background: var(--pink-soft);
+}
+
+.right {
+  text-align: right;
+}
+
+.design-card {
+  padding: 1.4rem;
+  border: 1px solid var(--olive-soft);
+  border-top: 5px solid var(--pink);
+  border-radius: 16px;
+  background: #fff;
+}
+
+/* ---------- 13. USTA PROFILI ---------- */
+.profile-cover {
+  height: 150px;
+  background: linear-gradient(120deg, var(--pink), var(--yellow) 60%, var(--olive-soft));
+}
+
+.profile-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-top: -60px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border: 5px solid var(--bg);
+  border-radius: 50%;
+  background: var(--olive);
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.badge {
+  display: inline-block;
+  margin-right: .3rem;
+  padding: .2rem .8rem;
+  border-radius: 50px;
+  background: var(--yellow);
+  color: var(--olive-dark);
+  font-size: .85rem;
+  font-weight: bold;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.info-card {
+  padding: 1.4rem;
+  border: 1px solid var(--olive-soft);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.info-card ul {
+  margin: 0 0 1.2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.info-card li {
+  margin-bottom: .7rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(180px, 100%), 1fr));
+  gap: 12px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.review {
+  margin-bottom: 1rem;
+  padding: 1rem 1.2rem;
+  border-left: 5px solid var(--pink-deep);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.review-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review p {
+  margin: 0;
+}
+
+/* ---------- 14. FORMALAR ---------- */
+.form-card {
+  padding: 2rem;
+  border: 1px solid var(--olive-soft);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(77, 90, 37, .08);
+}
+
+.form-card h2 {
+  margin: 2rem 0 1rem;
+  font-size: 1.2rem;
+}
+
+.form-card h2:first-child {
+  margin-top: 0;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.form-row .field {
+  margin-bottom: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: .3rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+input[type="url"],
+input[type="file"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding: .7rem .9rem;
+  border: 1px solid #d8d6c4;
+  border-radius: 10px;
+  background: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid rgba(107, 122, 54, .35);
+  border-color: var(--olive);
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-color: var(--pink-deep);
+}
+
+.hint {
+  margin-top: .3rem;
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+.checks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
+  gap: .5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin: 0;
+  font-weight: normal;
+}
+
+.check input {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--olive);
+}
+
+.auth-card {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin: 1.5rem 0;
+  color: var(--muted);
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #d8d6c4;
+}
+
+/* ---------- 15. MODAL OYNA (faqat CSS, :target) ---------- */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(36, 24, 32, .6);
+}
+
+.modal:target {
+  display: flex;
+}
+
+.modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+/* ---------- 16. FOOTER ---------- */
+.site-footer {
+  padding: 2.5rem 0 1.5rem;
+  background: var(--olive-dark);
+  color: #fff;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: 2rem;
+}
+
+.site-footer a {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer .logo,
+.site-footer .logo span {
+  color: var(--pink);
+}
+
+.site-footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer h3 {
+  font-size: 1rem;
+}
+
+.copy {
+  margin: 1.5rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, .25);
+  font-size: .9rem;
+}
+
+/* ---------- 17. TELEFON UCHUN ---------- */
+@media (max-width: 600px) {
+  section {
+    padding: 2.5rem 0;
+  }
+
+  .hero-img {
+    height: 300px;
+  }
+
+  .cta {
+    padding: 1.5rem;
+  }
+
+  .form-card {
+    padding: 1.2rem;
+  }
+}/* ---------- 18. XARITA ---------- */
+.map-wrap {
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+
+.map-img {
+  max-width: none;
+  border: 1px solid var(--olive-soft);
+  border-radius: 14px;
+}
+
+/* ---------- 19. HARAKAT (animatsiya) ---------- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.1); }
+}
+
+.hero-grid > div:first-child {
+  animation: fadeUp .8s ease both;
+}
+
+.hero-badge {
+  animation: floatY 3s ease-in-out infinite;
+}
+
+.step-num {
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+.btn {
+  transition: background .2s, transform .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
