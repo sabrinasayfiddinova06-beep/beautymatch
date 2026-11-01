@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dilnoza Karimova | BeautyMatch</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+      gap: 1.5rem;
+    }
+    video { width: 100%; max-height: 460px; border-radius: 14px; background: #000; }
+    audio { width: 100%; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html">Beauty<span>Match</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Bosh sahifa</a></li>
+        <li><a href="services.html">Xizmat va narxlar</a></li>
+        <li><a class="active" href="masters.html">Ustalar</a></li>
+        <li><a href="register-master.html">Usta bo'lish</a></li>
+        <li><a class="btn btn-sm" href="login.html">Kirish</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <!-- ===== USTA SARLAVHASI ===== -->
+    <div class="profile-cover"></div>
+    <div class="container profile-head">
+      <div class="avatar">D</div>
+      <div>
+        <h1>Dilnoza Karimova</h1>
+        <p class="muted">«Nafis» go'zallik saloni</p>
+        <span class="badge">Manikyur</span>
+        <span class="badge">Pedikyur</span>
+      </div>
+    </div>
+
+    <section style="padding-top: 2rem;">
+      <div class="container">
+        <ul class="pills">
+          <li><a href="#ishlari">Ishlari</a></li>
+          <li><a href="#media">Video va audio</a></li>
+           <li><a href="#narxlar">Narxlar</a></li>
+          <li><a href="#sharhlar">Sharhlar</a></li>
+        </ul>
+
+        <div class="profile-grid">
+
+          <!-- ===== CHAP TOMON ===== -->
+          <div>
+            <h2 class="block-title" id="ishlari">Usta haqida va ishlari</h2>
+            <p>Men 6 yildan beri manikyur va pedikyur bilan shug'ullanaman. Toza asbob-uskuna, sifatli materiallar va har bir mijozga alohida e'tibor — ish tamoyilim shu.</p>
+
+            <div class="gallery">
+              <img src="img/burgundy.jpg" alt="Manikyur ishi 1">
+              <img src="img/frenchyellow.jpg" alt="Ish namunasi 2">
+              <img src="img/longbaza.jpg" alt="Ish namunasi 3">
+              <img src="img/bazanyud.jpg" alt="Manikyur ishi 4">
+            </div>
+            <p style="margin-top: 1rem;">
+              <a class="btn btn-outline btn-sm" href="https://www.instagram.com/" target="_blank" rel="noopener">▶ Video ishlarni ko'rish</a>
+            </p>
+
+            <h2 class="block-title" id="media">Video, audio va fayllar</h2>
+            <div class="media-grid">
+              <div>
+                <h3>🎬 Ish jarayoni</h3>
+                <video controls preload="metadata" poster="img/video-poster.jpg">
+                  <source src="media/ish.mp4" type="video/mp4">
+                  Brauzeringiz video tegini qo'llab-quvvatlamaydi.
+                </video>
+              </div>
+              <div>
+                <h3>🎧 Ovozli tanishuv</h3>
+                <audio controls preload="none">
+                  <source src="media/salom.mp3" type="audio/mpeg">
+                  Brauzeringiz audio tegini qo'llab-quvvatlamaydi.
+                </audio>
+                <p style="margin-top: 1rem;">
+                  <a class="btn btn-outline btn-sm" href="media/narxnoma.pdf" target="_blank" rel="noopener">📄 Narxnomani ochish (PDF)</a>
+                  <a class="btn btn-sm" href="media/narxnoma.pdf" download>⬇ Yuklab olish</a>
+                </p>
+              </div>
+            </div>
+             <h2 class="block-title" id="narxlar">Narxlar</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Xizmat</th><th class="right">Narxi (so'm)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Klassik manikyur</td><td class="right">80 000 dan</td></tr>
+                  <tr><td>Gel-lak bilan manikyur</td><td class="right">120 000 dan</td></tr>
+                  <tr><td>Pedikyur</td><td class="right">130 000 dan</td></tr>
+                  <tr><td>Dizayn (1 ta barmoq)</td><td class="right">10 000 dan</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 class="block-title" id="sharhlar">Mijozlar sharhlari</h2>
+
+            <form class="form-card" action="master.html#sharhlar" method="get" style="margin-bottom: 1.5rem;">
+              <h2>Sharh qoldiring</h2>
+              <div class="field">
+                <label for="rRating">Baho</label>
+                <select id="rRating" name="baho" required>
+                  <option value="5">5 — a'lo</option>
+                  <option value="4">4 — yaxshi</option>
+                  <option value="3">3 — o'rtacha</option>
+                  <option value="2">2 — yomon</option>
+                  <option value="1">1 — juda yomon</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="rText">Fikringiz</label>
+                <textarea id="rText" name="fikr" rows="3" maxlength="400" required placeholder="Usta ishidan qanchalik mamnun bo'ldingiz?"></textarea>
+              </div>
+              <button class="btn" type="submit">Yuborish</button>
+            </form>
+
+            <div class="review">
+              <div class="review-top">
+                <strong>Malika</strong>
+                <span class="stars">★ 5</span>
+              </div>
+              <p>Juda toza va chiroyli ishlaydi. Gel-lak bir oydan ortiq turdi!</p>
+            </div>
+            <div class="review">
+              <div class="review-top">
+                <strong>Shahlo</strong>
+                <span class="stars">★ 4</span>
+              </div>
+              <p>Dizayni zo'r chiqdi, faqat navbat biroz kutdirdi.</p>
+            </div>
+          </div>
+
+          <!-- ===== O'NG TOMON: aloqa kartochkasi ===== -->
+          <aside class="info-card">
+            <h2>Ma'lumotlar</h2>
+            <ul>
+              <li>📍 Samarqand, Registon ko'chasi 12</li>
+              <li>🏅 Staji: <strong>6 yil</strong></li>
+              <li>📞 <a href="tel:+998901234567">+998 90 123 45 67</a></li>
+              <li>💰 Narxi: <strong>80 000 so'mdan</strong></li>
+            </ul>
+            <a class="btn btn-block" href="tel:+998901234567">📞 Qo'ng'iroq qilish</a>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo">Beauty<span>Match</span></div>
+          <p>Did, uslub va mahorat uchrashadigan joy.</p>
+        </div>
+        <div>
+          <h3>Sahifalar</h3>
+          <ul>
+            <li><a href="services.html">Xizmat va narxlar</a></li>
+            <li><a class="active" href="masters.html">Ustalar</a></li>
+            <li><a href="register-master.html">Usta bo'lish</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Aloqa</h3>
+          <ul>
+            <li>📞 +998 97 629 06 12</li>
+            <li>✉️ info@beautymatch.uz</li>
+          </ul>
+        </div>
+      </div>
+      <p class="copy">© 2026 BeautyMatch. Sabrina</p>
+    </div>
+  </footer>
+
+</body>
+</html>

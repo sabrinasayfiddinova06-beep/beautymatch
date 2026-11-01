@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kirish | BeautyMatch</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== MENYU ===== -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html">Beauty<span>Match</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Bosh sahifa</a></li>
+        <li><a href="services.html">Xizmat va narxlar</a></li>
+        <li><a href="masters.html">Ustalar</a></li>
+        <li><a href="register-master.html">Usta bo'lish</a></li>
+        <li><a class="btn btn-sm" href="login.html">Kirish</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="auth-card form-card">
+          <h1 class="center">Xush kelibsiz!</h1>
+          <p class="center muted">Telefon raqam yoki Google orqali kiring.</p>
+
+          <form action="index.html" method="get">
+            <div class="field">
+              <label for="loginName">Ismingiz</label>
+              <input type="text" id="loginName" name="ism" placeholder="Masalan: Dilnoza" required minlength="2" maxlength="40">
+            </div>
+            <div class="field">
+              <label for="loginPhone">Telefon raqam</label>
+              <input type="tel" id="loginPhone" name="telefon" placeholder="+998901234567"
+                     pattern="\+998[0-9]{9}" title="Format: +998901234567" required>
+              <div class="hint">Format: +998 va 9 ta raqam, masalan +998901234567</div>
+            </div>
+            <button class="btn btn-block btn-big" type="submit">Kirish</button>
+          </form>
+
+          <div class="divider">yoki</div>
+
+          <a class="btn btn-outline btn-block btn-big" href="#google">Google orqali kirish</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== GOOGLE MODAL (faqat CSS: :target) ===== -->
+  <div class="modal" id="google">
+    <div class="modal-box">
+      <a class="modal-close" href="#" aria-label="Yopish">×</a>
+      <h2>Google orqali kirish (demo)</h2>
+      <p class="muted small">Haqiqiy Google bilan kirish server qismi ulanganda ishlaydi. Hozircha faqat email kiriting.</p>
+      <form action="index.html" method="get">
+        <div class="field">
+          <label for="googleEmail">Email</label>
+          <input type="email" id="googleEmail" name="email" placeholder="ismingiz@gmail.com" required>
+        </div>
+        <button class="btn btn-block" type="submit">Davom etish</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo">Beauty<span>Match</span></div>
+          <p>Did, uslub va mahorat uchrashadigan joy.</p>
+        </div>
+        <div>
+          <h3>Sahifalar</h3>
+          <ul>
+            <li><a href="services.html">Xizmat va narxlar</a></li>
+            <li><a href="masters.html">Ustalar</a></li>
+            <li><a href="register-master.html">Usta bo'lish</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Aloqa</h3>
+          <ul>
+            <li>📞 +998 97 629 06 12</li>
+            <li>✉️ info@beautymatch.uz</li>
+          </ul>
+        </div>
+      </div>
+      <p class="copy">© 2026 BeautyMatch. Sabrina </p>
+    </div>
+  </footer>
+
+</body>
+</html>

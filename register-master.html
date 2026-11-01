@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usta bo'lish | BeautyMatch</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html">Beauty<span>Match</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Bosh sahifa</a></li>
+        <li><a href="services.html">Xizmat va narxlar</a></li>
+        <li><a href="masters.html">Ustalar</a></li>
+        <li><a class="active" href="register-master.html">Usta bo'lish</a></li>
+        <li><a class="btn btn-sm" href="login.html">Kirish</a></li>
+      </ul>
+    </div>
+  </header>
+<header class="page-head">
+    <div class="container">
+      <h1>Usta akkauntini oching</h1>
+      <p class="muted">Ma'lumotlaringizni kiriting — profilingiz saytda paydo bo'ladi.</p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container" style="max-width: 820px;">
+        <form class="form-card" action="master.html" method="get">
+
+          <h2>1. Shaxsiy ma'lumotlar</h2>
+          <div class="form-row">
+            <div class="field">
+              <label for="rName">Ism va familiya</label>
+              <input type="text" id="rName" name="ism" required minlength="3" maxlength="60">
+            </div>
+            <div class="field">
+              <label for="rPhone">Telefon raqam</label>
+              <input type="tel" id="rPhone" name="telefon" placeholder="+998901234567"
+                     pattern="\+998[0-9]{9}" title="Format: +998901234567" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="rSalon">Salon nomi (ixtiyoriy)</label>
+              <input type="text" id="rSalon" name="salon" maxlength="60">
+            </div>
+            <div class="field">
+              <label for="rExp">Ish staji (yil)</label>
+              <input type="number" id="rExp" name="staj" min="0" max="50" value="1" required>
+            </div>
+          </div>
+
+          <h2>2. Manzil</h2>
+          <div class="form-row">
+            <div class="field">
+              <label for="rCity">Viloyat / shahar</label>
+              <select id="rCity" name="shahar" required>
+                <option value="">Tanlang...</option>
+                <option value="toshkent">Toshkent shahri</option>
+                <option value="toshkentv">Toshkent viloyati</option>
+                <option value="samarqand">Samarqand</option>
+                <option value="buxoro">Buxoro</option>
+                <option value="andijon">Andijon</option>
+                <option value="fargona">Farg'ona</option>
+                <option value="namangan">Namangan</option>
+                <option value="qashqadaryo">Qashqadaryo (Qarshi)</option>
+                <option value="surxondaryo">Surxondaryo (Termiz)</option>
+                <option value="navoiy">Navoiy</option>
+                <option value="jizzax">Jizzax</option>
+                <option value="sirdaryo">Sirdaryo (Guliston)</option>
+                <option value="xorazm">Xorazm (Urganch)</option>
+                <option value="qoraqalpogiston">Qoraqalpog'iston (Nukus)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="rAddress">Aniq manzil</label>
+              <input type="text" id="rAddress" name="manzil" placeholder="Ko'cha, uy, mo'ljal" required maxlength="120">
+            </div>
+          </div>
+
+          <h2>3. Xizmatlar va narx</h2>
+          <p><strong>Qaysi xizmatlarni ko'rsatasiz?</strong></p>
+          <div class="checks">
+            <label class="check"><input type="checkbox" name="xizmat" value="manikyur"> Manikyur</label>
+            <label class="check"><input type="checkbox" name="xizmat" value="pedikyur"> Pedikyur</label>
+            <label class="check"><input type="checkbox" name="xizmat" value="soch"> Soch turmagi</label>
+            <label class="check"><input type="checkbox" name="xizmat" value="boyash"> Soch bo'yash</label>
+            <label class="check"><input type="checkbox" name="xizmat" value="makiyaj"> Makiyaj</label>
+            <label class="check"><input type="checkbox" name="xizmat" value="qosh"> Qosh va kiprik</label>
+          </div>
+          <div class="field" style="max-width: 360px;">
+            <label for="rPrice">Boshlang'ich narx (so'm)</label>
+            <input type="number" id="rPrice" name="narx" min="0" step="5000" placeholder="100000" required>
+          </div>
+
+          <h2>4. O'zingiz va ishlaringiz haqida</h2>
+          <div class="field">
+            <label for="rAbout">O'zingiz haqingizda</label>
+            <textarea id="rAbout" name="haqida" rows="4" maxlength="500" required placeholder="Tajribangiz, uslubingiz, qaysi materiallar bilan ishlashingiz..."></textarea>
+          </div>
+          <div class="field">
+            <label for="rImages">Ish rasmlari (bir nechtasini tanlash mumkin)</label>
+            <input type="file" id="rImages" name="rasmlar" accept="image/*" multiple>
+          </div>
+          <div class="field">
+            <label for="rVideo">Video havolasi (Instagram, YouTube — ixtiyoriy)</label>
+            <input type="url" id="rVideo" name="video" placeholder="https://www.instagram.com/...">
+          </div>
+
+          <label class="check" style="margin: 1.5rem 0;">
+            <input type="checkbox" name="rozilik" required>
+            Kiritgan ma'lumotlarim to'g'ri ekanini tasdiqlayman
+          </label>
+
+          <div class="btn-row">
+            <button class="btn btn-big" type="submit">Akkaunt ochish</button>
+            <button class="btn btn-outline btn-big" type="reset">Tozalash</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo">Beauty<span>Match</span></div>
+          <p>Did, uslub va mahorat uchrashadigan joy.</p>
+        </div>
+        <div>
+          <h3>Sahifalar</h3>
+          <ul>
+            <li><a href="services.html">Xizmat va narxlar</a></li>
+            <li><a href="masters.html">Ustalar</a></li>
+            <li><a href="register-master.html">Usta bo'lish</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Aloqa</h3>
+          <ul>
+            <li>📞 +998 97 629 06 12</li>
+            <li>✉️ info@beautymatch.uz</li>
+          </ul>
+        </div>
+      </div>
+      <p class="copy">© 2026 BeautyMatch. Sabrina</p>
+    </div>
+  </footer>
+
+</body>
+</html>
